@@ -25,8 +25,8 @@ public class AccidentService {
         ac2.setAddress("Address 2");
 
 
-        am.add(ac1);
-        am.add(ac2);
+       am.add(ac1);
+       am.add(ac2);
     }
 
     public Map getAm() {

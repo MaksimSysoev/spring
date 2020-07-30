@@ -1,14 +1,18 @@
 package ru.job4j.accident.repository;
 import org.springframework.stereotype.Repository;
 import ru.job4j.accident.model.Accident;
+
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Repository
+
+//@Repository
 public class AccidentMem {
 
-    private HashMap<Integer, Accident> accidents = new HashMap<>();
+    private ConcurrentHashMap<Integer, Accident> accidents = new ConcurrentHashMap<>();
     private AtomicInteger id = new AtomicInteger(1);
 
     public void add(Accident accident) {
@@ -18,4 +22,6 @@ public class AccidentMem {
     public Map getAccidents() {
         return accidents;
     }
+
 }
+
