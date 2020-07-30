@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<c:forEach items="${accidents}" var="accident">
-    <c:out value="${accident.name}"/></br>
-</c:forEach>
-<!--
+
 <div class="container">
     <div class="row" style="height: 25px; "></div>
     <div class="row">
@@ -31,12 +28,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${accidents}" var="entry">
+                <c:forEach items="${accidents}" var="accident">
                     <tr>
-                        <th scope="row">${entry.value.id}</th>
-                        <td>${entry.value.name}</td>
-                        <td>${entry.value.text}</td>
-                        <td>${entry.value.address}</td>
+                        <th scope="row"><c:out value="${accident.id}"/></th>
+                        <td><c:out value="${accident.name}"/></td>
+                        <td><c:out value="${accident.text}"/></td>
+                        <td><c:out value="${accident.address}"/></td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -46,6 +43,5 @@
     </div>
 </div>
 
--->
 </body>
 </html>
