@@ -20,6 +20,8 @@ public class AccidentJdbcTemplate {
         int rowCount = jdbc.queryForObject("select count(*) from accident", Integer.class);
         if (rowCount == 0) {
             this.save(new Accident("User1", "Text1", "Address1"));
+            this.save(new Accident("User2", "Text2", "Address2"));
+            this.save(new Accident("User3", "Text3", "Address3"));
         }
 
     }
