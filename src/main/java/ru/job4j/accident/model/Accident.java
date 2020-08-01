@@ -1,9 +1,20 @@
 package ru.job4j.accident.model;
 
+import javax.persistence.*;
+import java.util.Objects;
+
+@Entity
+@Table(name = "accident")
 public class Accident {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String name;
+
     private String text;
+
     private String address;
 
     public Accident() {
@@ -45,5 +56,18 @@ public class Accident {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Accident accident = (Accident) o;
+        return id == accident.id;
     }
 }
