@@ -11,7 +11,10 @@
     <div class="row" style="height: 25px; "></div>
     <div class="row">
         <div class="col-md-12" style="text-align: center; ">
-            <h3>Правонарушения</h3>
+            <p>
+                Login as : ${user.username}
+            </p>
+            <h4>Правонарушения</h4>
         </div>
     </div>
     <div class="row" style="height: 25px; "></div>
